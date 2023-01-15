@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+div {
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main_conatiner {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+}
+.left_side {
+  position: absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cityImg {
+  width: 493px;
+  height: 666px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  opacity: 20%;
+  border-radius: 30px;
+  position: relative;
 }
+.cityImagediv {
+  border-radius: 30px;
+  width: 493px;
+  height: 666px;
+  position: relative;
+  background: linear-gradient(
+    152.19deg,
+    rgba(136, 235, 239, 0.9) -0.04%,
+    rgba(83, 91, 230, 0.9) 100%
+  );
+}
+.dateTextDiv {
+  position: absolute;
+  top: 48px;
+  left: 32px;
+}
+.date_day {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 37px;
+  margin-bottom: 16px;
+}
+.date {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  margin-bottom: 19px;
+}
+.location {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.location_conatainer_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.temperature_container_div {
+  position: absolute;
+  bottom: 84px;
+  left: 32px;
+}
+.temperature {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+  margin-bottom: 13px;
+  margin-top: 9px;
+}
+.temperature_description {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+}
+.right_side {
+  width: 944px;
+  height: 623px;
+  display: flex;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: #222831;
+  border-radius: 25px;
+  margin-left: 69px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.right_main {
   display: flex;
   flex-direction: column;
+  margin-right: 50px;
+  margin-top: 55px;
+}
+.phw_div {
+  display: flex;
+  flex-direction: row;
+  width: 415px;
+  justify-content: space-between;
+}
+.phw_title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+}
+.phw_value {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: right;
+}
+.day_conatiner_div {
+  display: flex;
+  width: 415px;
+  gap: 1px;
+  margin-top: 80px;
+}
+.Location_button {
+  width: 415px;
+  height: 53px;
+  cursor: pointer;
+  background: linear-gradient(
+    90.8deg,
+    rgba(144, 217, 224, 0.9) 0.2%,
+    rgba(84, 96, 230, 0.9) 100%
+  );
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  gap: 6px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  margin-top: 70px;
 }
