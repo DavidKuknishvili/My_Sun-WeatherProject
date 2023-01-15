@@ -66,9 +66,6 @@ function App() {
   return (
     <div className="App">
       <div className="main_conatiner">
-     
-
-
         <motion.div
         style={{position:'relative'}}
           initial={{ x: 1000, y:20}}
@@ -91,10 +88,6 @@ function App() {
           <ImageSide imageUrl={imageUrl} currentWeather={currentWeather} />
         </motion.div>
         </div>
-
-
-        
-      
     </div>
   );
 }
