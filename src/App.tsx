@@ -1,18 +1,6 @@
 import React from "react";
 import "./App.css";
 import imageRequest from "./api/imageApi";
-import {
-  Cloudy,
-  CloudySun,
-  CurrentIcon,
-  Mist,
-  Rain,
-  Snow,
-  Sun,
-  Thunder,
-} from "./icons/icons";
-import { Location } from "./icons/icons";
-import Day from "./components/Day";
 import { current, fourDays } from "./api/dataApi";
 import { ResultInterface } from "./api/dataApi";
 import ImageSide from "./components/ImageSide";
@@ -46,22 +34,9 @@ function App() {
       const fourData = await fourDays(city);
 
       setFourDay(fourData);
-      // console.log(fourData)
     };
     fourDaysData(city);
   }, [city]);
-
-  const popup = () => {
-    let text;
-    let popupInput = prompt("Please enter city name:", "");
-    let cityInput = String(popupInput);
-    if (city == "null" || city == "") {
-      text = city;
-    } else {
-      text = cityInput;
-      setcity(text);
-    }
-  };
 
   return (
     <div className="App">

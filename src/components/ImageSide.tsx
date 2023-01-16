@@ -1,17 +1,10 @@
 import React from "react";
-import {
-  Cloudy,
-  CloudySun,
-  CurrentIcon,
-  Mist,
-  Rain,
-  Snow,
-  Sun,
-  Thunder,
-} from "../icons/icons";
-
+import { CurrentIcon } from "../icons/icons";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Location } from "../icons/icons";
 import { ResultInterface } from "../api/dataApi";
+
 // imageUrl:string, currentWeather:ResultInterface |null
 export default function ImageSide(props: {
   currentWeather: ResultInterface | null;
@@ -46,9 +39,20 @@ export default function ImageSide(props: {
   return (
     <div className="left_side">
       <div className="cityImagediv">
-        {props.imageUrl ? (
-          <img className="cityImg" src={props.imageUrl} alt="" />
-        ) : null}
+        
+
+          <LazyLoadImage
+            effect="blur"
+            className="cityImg"
+            width={'493px'}
+            height={'666px'}
+            style={{opacity:'25%'}}
+            src={props.imageUrl}
+            alt=""
+
+          />
+
+
         <div className="dateTextDiv">
           <div>
             <div className="date_day">{monthList[monthNumber]}</div>

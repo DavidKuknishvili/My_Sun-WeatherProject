@@ -10,9 +10,9 @@ div {
   flex-direction: row;
   /* align-items: center; */
 }
-.left_side {
+/* .left_side {
   position: absolute;
-}
+} */
 
 .cityImg {
   width: 493px;
