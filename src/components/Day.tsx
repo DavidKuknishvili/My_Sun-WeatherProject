@@ -59,7 +59,7 @@ export default function Day(props: {
   iconTextColor: string;
   item: MainWeatherInterface
 }) {
-  
+  console.log(props.item.weather.icon.slice(-3))
   return (
     <div>
       <div

@@ -245,58 +245,49 @@ export const Mist = (props: {
 
 export  const CurrentIcon = (width: string, height: string, color: string, icon:string) => {
   // console.log(icon);
+  
 
-  if (icon === "01d" || icon === "01n" || icon === "c01d" || icon === "c01n") {
+  if (icon.slice(-3) === "01d" || icon.slice(-3) === "01n" ) {
     return <Sun width={width} height={height} color={color} />;
   } else if (
-    icon === "02d" ||
-    icon === "02n"||
-    icon === "c02d" ||
-    icon === "c02n"
+    icon.slice(-3) === "02d" ||
+    icon.slice(-3)  === "02n"
+
   ) {
     return <CloudySun width={width} height={height} color={color} />;
   } else if (
-    icon === "03d" ||
-    icon === "03n" ||
-    icon === "04d" ||
+    icon.slice(-3)  === "03d" ||
+    icon.slice(-3)  === "03n" ||
+    icon.slice(-3)  === "04d" ||
 
-    icon === "04n" ||
-    icon === "c03d" ||
-    icon === "c03n" ||
-    icon === "c04d" ||
-    icon === "c04n"
+    icon.slice(-3)  === "04n" 
+
   ) {
     return <Cloudy width={width} height={height} color={color} />;
   } else if (
-    icon === "09d" ||
-    icon === "09n" ||
-    icon === "10d" ||
-    icon === "10n"||
-    icon === "c09d" ||
-    icon === "c09n" ||
-    icon === "c10d" ||
-    icon === "c10n"
+    icon.slice(-3)  === "09d" ||
+    icon.slice(-3)  === "09n" ||
+    icon.slice(-3)  === "10d" ||
+    icon.slice(-3)  === "10n"
+
   ) {
     return <Rain width={width} height={height} color={color} />;
   } else if (
-    icon === "11d" ||
-    icon === "11n"||
-    icon === "c11d" ||
-    icon === "c11n"
+    icon.slice(-3)  === "11d" ||
+    icon.slice(-3)  === "11n"
+
   ) {
     return <Thunder width={width} height={height} color={color} />;
   } else if (
-    icon === "13d" ||
-    icon === "13n"||
-    icon === "c13d" ||
-    icon === "c13n"
+    icon.slice(-3)  === "13d" ||
+    icon.slice(-3)  === "13n"||
+    icon.slice(-3)  === "c13d" ||
+    icon.slice(-3)  === "c13n"
   ) {
     return <Snow width={width} height={height} color={color} />;
   } else if (
-    icon === "50d" ||
-    icon === "50n" ||
-    icon === "c50d" ||
-    icon === "c50n"
+    icon.slice(-3)  === "50d" ||
+    icon.slice(-3)  === "50n"
   ) {
     return <Mist width={width} height={height} color={color} />;
   }
