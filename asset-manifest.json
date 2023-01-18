@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/My_Sun-WeatherProject/static/css/main.84d8bfe3.css",
+    "main.js": "/My_Sun-WeatherProject/static/js/main.83fa30cf.js",
+    "index.html": "/My_Sun-WeatherProject/index.html",
+    "main.84d8bfe3.css.map": "/My_Sun-WeatherProject/static/css/main.84d8bfe3.css.map",
+    "main.83fa30cf.js.map": "/My_Sun-WeatherProject/static/js/main.83fa30cf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84d8bfe3.css",
+    "static/js/main.83fa30cf.js"
+  ]
+}
