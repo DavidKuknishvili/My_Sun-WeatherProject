@@ -1,11 +1,8 @@
-
-
 export const CloudySun = (props: {
   color: string;
   width: string;
   height: string;
 }) => {
-  console.log(props.color);
   return (
     <svg
       width={props.width}
@@ -240,55 +237,40 @@ export const Mist = (props: {
   );
 };
 
-
-
-
-export  const CurrentIcon = (width: string, height: string, color: string, icon:string) => {
-  // console.log(icon);
-  
-
-  if (icon.slice(-3) === "01d" || icon.slice(-3) === "01n" ) {
+export const CurrentIcon = (
+  width: string,
+  height: string,
+  color: string,
+  icon: string
+) => {
+  if (icon.slice(-3) === "01d" || icon.slice(-3) === "01n") {
     return <Sun width={width} height={height} color={color} />;
-  } else if (
-    icon.slice(-3) === "02d" ||
-    icon.slice(-3)  === "02n"
-
-  ) {
+  } else if (icon.slice(-3) === "02d" || icon.slice(-3) === "02n") {
     return <CloudySun width={width} height={height} color={color} />;
   } else if (
-    icon.slice(-3)  === "03d" ||
-    icon.slice(-3)  === "03n" ||
-    icon.slice(-3)  === "04d" ||
-
-    icon.slice(-3)  === "04n" 
-
+    icon.slice(-3) === "03d" ||
+    icon.slice(-3) === "03n" ||
+    icon.slice(-3) === "04d" ||
+    icon.slice(-3) === "04n"
   ) {
     return <Cloudy width={width} height={height} color={color} />;
   } else if (
-    icon.slice(-3)  === "09d" ||
-    icon.slice(-3)  === "09n" ||
-    icon.slice(-3)  === "10d" ||
-    icon.slice(-3)  === "10n"
-
+    icon.slice(-3) === "09d" ||
+    icon.slice(-3) === "09n" ||
+    icon.slice(-3) === "10d" ||
+    icon.slice(-3) === "10n"
   ) {
     return <Rain width={width} height={height} color={color} />;
-  } else if (
-    icon.slice(-3)  === "11d" ||
-    icon.slice(-3)  === "11n"
-
-  ) {
+  } else if (icon.slice(-3) === "11d" || icon.slice(-3) === "11n") {
     return <Thunder width={width} height={height} color={color} />;
   } else if (
-    icon.slice(-3)  === "13d" ||
-    icon.slice(-3)  === "13n"||
-    icon.slice(-3)  === "c13d" ||
-    icon.slice(-3)  === "c13n"
+    icon.slice(-3) === "13d" ||
+    icon.slice(-3) === "13n" ||
+    icon.slice(-3) === "c13d" ||
+    icon.slice(-3) === "c13n"
   ) {
     return <Snow width={width} height={height} color={color} />;
-  } else if (
-    icon.slice(-3)  === "50d" ||
-    icon.slice(-3)  === "50n"
-  ) {
+  } else if (icon.slice(-3) === "50d" || icon.slice(-3) === "50n") {
     return <Mist width={width} height={height} color={color} />;
   }
 };

@@ -135,12 +135,15 @@ export default function PopupComponent(props: {
                 </Typography>
               </div>
               <div className="popupInpButto">
-                <CustomInput placeholder="City name…" onChange={(text)=> setCityName(text.target.value)} />
+                <CustomInput
+                  placeholder="City name…"
+                  onChange={(text) => setCityName(text.target.value)}
+                />
                 <button
                   className="Location_button search"
                   onClick={() => {
                     props.setcity(cityName);
-                    handleClose()
+                    handleClose();
                   }}
                 >
                   Search

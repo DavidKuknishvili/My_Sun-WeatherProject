@@ -2,14 +2,13 @@ import React from "react";
 import "./Days.css";
 import { CurrentIcon, Sun } from "../icons/icons";
 
-
-interface VisualWeatherInterface{
+interface VisualWeatherInterface {
   description: string;
   code: number;
   icon: string;
 }
 
-interface MainWeatherInterface{
+interface MainWeatherInterface {
   app_max_temp: number;
   app_min_temp: number;
   clouds: number;
@@ -47,35 +46,38 @@ interface MainWeatherInterface{
   wind_dir: number;
   wind_gust_spd: number;
   wind_spd: number;
-  weather:VisualWeatherInterface;
-
+  weather: VisualWeatherInterface;
 }
-
-
-
 
 export default function Day(props: {
   backgroundColor: string;
   iconTextColor: string;
-  item: MainWeatherInterface
+  item: MainWeatherInterface;
 }) {
-  console.log(props.item.weather.icon.slice(-3))
+  const date = new Date(props.item.datetime);
+  const weekDay = date.getDay();
+
+  const dayArry = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
   return (
     <div>
       <div
         style={{ background: props.backgroundColor }}
         className="day_container_div"
       >
-        {CurrentIcon("55px","55px", props.iconTextColor, props.item.weather.icon)}
+        {CurrentIcon(
+          "55px",
+          "55px",
+          props.iconTextColor,
+          props.item.weather.icon
+        )}
         <div style={{ color: props.iconTextColor }} className="day_title">
-          Tue
+          {dayArry[weekDay - 1]}
         </div>
         <div style={{ color: props.iconTextColor }} className="day_temperature">
-          {Math.round(Number(props.item.high_temp)) +'°C'} 
+          {Math.round(Number(props.item.high_temp)) + "°C"}
         </div>
       </div>
     </div>
   );
 }
-
-

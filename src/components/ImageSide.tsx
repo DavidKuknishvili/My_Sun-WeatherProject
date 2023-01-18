@@ -1,11 +1,11 @@
 import React from "react";
 import { CurrentIcon } from "../icons/icons";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { Location } from "../icons/icons";
 import { ResultInterface } from "../api/dataApi";
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 // imageUrl:string, currentWeather:ResultInterface |null
 export default function ImageSide(props: {
@@ -41,24 +41,17 @@ export default function ImageSide(props: {
   return (
     <div className="left_side">
       <div className="cityImagediv">
-        
-{
- 
-  <LazyLoadImage
-    effect="blur"
-    className="cityImg"
-    width={'493px'}
-    height={'666px'}
-    style={{opacity:'25%'}}
-    src={props.imageUrl}
-    alt=""
-
-  />
-  ||
-  <Skeleton/>
-
-}
-
+        {(
+          <LazyLoadImage
+            effect="blur"
+            className="cityImg"
+            width={"493px"}
+            height={"666px"}
+            style={{ opacity: "25%" }}
+            src={props.imageUrl}
+            alt=""
+          />
+        ) || <Skeleton />}
 
         <div className="dateTextDiv">
           <div>

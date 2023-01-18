@@ -16,7 +16,6 @@ function App() {
 
   const [fourDay, setFourDay] = React.useState<any>([]);
 
-  console.log(fourDay);
   React.useLayoutEffect(() => {
     const imageData = async (city: string) => {
       const imgUrl = await imageRequest(city);
@@ -42,10 +41,10 @@ function App() {
     <div className="App">
       <div className="main_conatiner">
         <motion.div
-        style={{position:'relative'}}
-          initial={{ x: 1000, y:20}}
-          animate={{ x: 0, y:20}}
-          transition={{ type: "spring", stiffness: 40, damping:10 }}
+          className="motionDivFirst"
+          initial={{ x: 1000, y: 20 }}
+          animate={{ x: 0, y: 20 }}
+          transition={{ type: "spring", stiffness: 40, damping: 10 }}
         >
           <DetailSide
             currentWeather={currentWeather}
@@ -55,14 +54,14 @@ function App() {
           />
         </motion.div>
         <motion.div
-        style={{position:'absolute'}}
+          className="motionDivSecond"
           initial={{ x: -1000 }}
           animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 40,damping:10 }}
+          transition={{ type: "spring", stiffness: 40, damping: 10 }}
         >
           <ImageSide imageUrl={imageUrl} currentWeather={currentWeather} />
         </motion.div>
-        </div>
+      </div>
     </div>
   );
 }
